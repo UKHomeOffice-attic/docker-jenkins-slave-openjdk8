@@ -48,7 +48,7 @@ In this mode you pass the container 3 parameters.
 This looks look a bit like this in docker
 
 ```shell
-docker run quay.io/ukhomeofficedigital/jenkins-slave-openjdk8:v0.2.0 \
+docker run quay.io/ukhomeofficedigital/jenkins-slave-openjdk8:v0.2.1 \
            jenkins-slave \
            http://jenkins-url:5321 \
            my-node
@@ -60,9 +60,19 @@ run the command you want to execute as a parameter as normal.
 So if you wanted to run bash, you'd run this 
 
 ```shell
-docker run quay.io/ukhomeofficedigital/jenkins-slave-openjdk8:v0.2.0 \
+docker run quay.io/ukhomeofficedigital/jenkins-slave-openjdk8:v0.2.1 \
            bash
 ```
+
+### Environment Variables
+
+* `SONARQUBE_HOST_URL` Host that Sonar Qube is running on. Defaults to `http://localhost:9000`
+* `SONARQUBE_JDBC_USERNAME` Database username for Sonar Qube. Defaults to `sonar`
+* `SONARQUBE_JDBC_PASSWORD` Database password for Sonar Qube. Defaults to `sonar`
+* `$SONARQUBE_JDBC_PASSWORD_PATH` Path to file with database password for Sonar Qube. Overwrites 
+  `SONARQUBE_JDBC_PASSWORD` if present.
+* `SONARQUBE_JDBC_URL` The JDBC url to the database for Sonar Qube. Defaults to 
+  `jdbc:mysql://localhost:3306/sonar?useUnicode=true&amp;characterEncoding=utf8`
 
 ### Volumes
 
