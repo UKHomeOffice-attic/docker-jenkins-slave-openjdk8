@@ -1,5 +1,7 @@
 # Jenkins Slave Docker Container: OpenJDK8 Build Tools
 
+[![Build Status](https://travis-ci.org/UKHomeOffice/docker-jenkins-slave-openjdk8.svg?branch=master)](https://travis-ci.org/UKHomeOffice/docker-jenkins-slave-openjdk8)
+
 This container is an Jenkins slave with OpenJDK8 Build Tools. It extends the 
 [Jenkins Slave Docker Container][1] by adding Java build tools.
 
