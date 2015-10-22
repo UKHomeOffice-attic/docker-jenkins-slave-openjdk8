@@ -1,4 +1,4 @@
-FROM quay.io/ukhomeofficedigital/jenkins-slave:v0.1.0
+FROM quay.io/ukhomeofficedigital/jenkins-slave:v0.2.0
 
 RUN yum install -y java-1.8.0-openjdk-devel unzip && \
     yum clean all
